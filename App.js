@@ -8,7 +8,7 @@ class IndividualStudents extends React.Component {
   render() {
     return (
       <div>
-        <img src="" />
+        <img src="{this.props.student.image}" />
         <p>{this.props.student.name}</p>
       </div>
     )
@@ -24,9 +24,5 @@ var ContainingDiv = (props) => {
     </div>
   )
 }
-
-
-
-
 
 export default ContainingDiv

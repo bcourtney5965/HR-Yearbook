@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ContainingDiv from './App';
 
-var hrStudents = [
-  {
-    "name": "Claire Hsu",
-    "cohort": "41"
-  },
-  {
-    "name": "David Gilroy",
-    "cohort": "41"
+$.get( "https://hr-yearbook.herokuapp.com/api/cohort/37", function( data ) {
+  var hrStudents = [];
+  for(var i = 0; i < data.length; i++) {
+    hrStudents.push(data[i]);
   }
-];
-ReactDOM.render(<ContainingDiv students={hrStudents}/>, document.getElementById('app'))
+  ReactDOM.render(<ContainingDiv students={hrStudents}/>, document.getElementById('app'));
+});
