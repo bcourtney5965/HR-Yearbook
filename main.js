@@ -1,4 +1,15 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-import App from './App';
-// ReactDOM.render(<App />, document.getElementById('app'))
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ContainingDiv from './App';
+
+var hrStudents = [
+  {
+    "name": "Claire Hsu",
+    "cohort": "41"
+  },
+  {
+    "name": "David Gilroy",
+    "cohort": "41"
+  }
+];
+ReactDOM.render(<ContainingDiv students={hrStudents}/>, document.getElementById('app'))

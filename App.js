@@ -1,16 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-class App extends React.Component {
-  render(){
+// import ReactDOM from 'react-dom';
+
+class IndividualStudents extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
     return (
       <div>
-        <h1>Hello, World</h1>
-        <b>Bold</b>
+        <img src="" />
+        <p>{this.props.student.name}</p>
       </div>
-    );
+    )
   }
 }
 
-// const App = () => <h1>Hello Eggheads</h1> class-less compnenet
+var ContainingDiv = (props) => {
+  return (
+    <div>
+      {props.students.map(function(student, key) {
+        return <IndividualStudents student={student} key={key} />
+      })}
+    </div>
+  )
+}
 
-export default App
+
+
+
+
+export default ContainingDiv
