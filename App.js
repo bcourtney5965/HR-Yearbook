@@ -2,9 +2,6 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 
 class Buttons extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
     return (
       <div>
@@ -18,13 +15,7 @@ class Buttons extends React.Component {
 class IndividualStudents extends React.Component {
   constructor() {
     super();
-    this.state = { cohort: null }
-    this.update = this.update.bind(this);
   }
-  update(newVal) {
-    this.setState({val: newVal})
-  }
-  
   render() {
     return (
       <div>
@@ -35,7 +26,16 @@ class IndividualStudents extends React.Component {
   }
 }
 
-var ContainingDiv = (props) => {
+class ContainingDiv extends React.Component (props) => {
+  constructor() {
+    super()
+      this.state = { cohort: null }
+      this.update = this.update.bind(this);
+    }
+    update(newVal) {
+      this.setState({cohort: newVal})
+    }
+  }
   return (
     <div>
       <Buttons />
